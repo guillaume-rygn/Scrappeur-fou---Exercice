@@ -37,8 +37,7 @@ def crypto_url_symbol(crypto_main_path)
     page = Nokogiri::HTML(URI.open(url_full))
                           
     symbol = page.xpath('/html/body/div[1]/div[1]/div[1]/div[2]/div/div[1]/div//h2/small[@class="nameSymbol"]').text
-    crypto_symbol << symbol
-
+    
     if symbol != ""
       crypto_symbol << symbol
     end
